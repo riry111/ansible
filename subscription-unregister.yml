@@ -4,7 +4,7 @@
  
   tasks:
  
-  - name: Register Subscription 
+  - name: UnRegister Subscription 
     redhat_subscription: 
       state=absent 
       username={{ RHSM_USERNAME }}
