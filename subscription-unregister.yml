@@ -4,6 +4,6 @@
  
   tasks:
  
-  - Register Subscription 
+  - name: Register Subscription 
     redhat_subscription: state=absent username={{ USER_NAME }} password={{ PASSWD }} autosubscribe=true
 
