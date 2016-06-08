@@ -4,6 +4,8 @@
  
   tasks:
  
-  - name: UnRegister Subscription 
-    redhat_subscription: state=absent username={{ USER_NAME }} password={{ PASSWD }} autosubscribe=true
-
+  - name: Register Subscription 
+    redhat_subscription: 
+      state=absent 
+      username={{ RHSM_USERNAME }}
+      password={{ RHSM_PASSWORD }}
