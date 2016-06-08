@@ -5,8 +5,5 @@
   tasks:
  
   - name: Register Subscription 
-    redhat_subscription: state=present username={{ USER_NAME }} password={{ PASSWD }} autosubscribe=true
-
-  - name: Attach Employee SKU
-    redhat_subscription: state=present
+    redhat_subscription: state=present username={{ USER_NAME }} password={{ PASSWD }}
                        pool='^Employee SKU$'
