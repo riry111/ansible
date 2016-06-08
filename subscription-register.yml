@@ -1,0 +1,12 @@
+---
+- name: Subscription Register !
+  hosts: all
+ 
+  tasks:
+ 
+  - Register Subscription 
+    redhat_subscription: state=present username={{ USER_NAME }} password={{ PASSWD }} autosubscribe=true
+
+  - Attach Employee SKU
+    redhat_subscription: state=present
+                       pool='^Employee SKU$'

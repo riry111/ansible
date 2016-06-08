@@ -1,0 +1,9 @@
+---
+- name: Subscription UnRegister !
+  hosts: all
+ 
+  tasks:
+ 
+  - Register Subscription 
+    redhat_subscription: state=absent username={{ USER_NAME }} password={{ PASSWD }} autosubscribe=true
+
