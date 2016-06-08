@@ -1,0 +1,7 @@
+---
+- name: Server Initial Update (Subscription Register &  yum update)
+  hosts: all
+ 
+  tasks:
+    - include: tasks/subscription-register.yml
+    - include: tasks/yum-update.yml

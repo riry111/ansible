@@ -1,0 +1,6 @@
+---
+- name: Subscription UnRegister
+  hosts: all
+ 
+  tasks:
+    - include: tasks/subscription-unregister.yml
