@@ -5,5 +5,4 @@
   tasks:
  
   - name: Register Subscription 
-    redhat_subscription: state=present username={{ USER_NAME }} password={{ PASSWD }}
-                       pool='^Employee SKU$'
+    redhat_subscription: state=present username={{ USER_NAME }} password={{ PASSWD }} pool='^Employee SKU$'
