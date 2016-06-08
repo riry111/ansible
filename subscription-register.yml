@@ -9,4 +9,11 @@
       state=present
       username={{ RHSM_USERNAME }}
       password={{ RHSM_PASSWORD }}
+      autosubscribe=true
+
+  - name: Attach Employee SKU
+    redhat_subscription:
+      state=present
+      username={{ RHSM_USERNAME }}
+      password={{ RHSM_PASSWORD }}
       pool='^Employee SKU$'
