@@ -1,22 +1,16 @@
----
-- name: Subscription Register !
-  hosts: all
- 
-  tasks:
- 
-  - name: Register Subscription 
-    redhat_subscription:
-      state=present
-      username={{ RHSM_USERNAME }}
-      password={{ RHSM_PASSWORD }}
-      autosubscribe=true
+- name: Register Subscription 
+  redhat_subscription:
+    state=present
+    username={{ RHSM_USERNAME }}
+    password={{ RHSM_PASSWORD }}
+    autosubscribe=true
 
-  - name: Attach Employee SKU
-    shell: subscription-manager attach --pool {{ POOL_ID }}
+- name: Attach Employee SKU
+  shell: subscription-manager attach --pool {{ POOL_ID }}
 
-#  - name: Attach Employee SKU
-#    redhat_subscription:
-#      state=present
-#      username={{ RHSM_USERNAME }}
-#      password={{ RHSM_PASSWORD }}
-#      pool='^Employee SKU$'
+#- name: Attach Employee SKU
+#  redhat_subscription:
+#    state=present
+#    username={{ RHSM_USERNAME }}
+#    password={{ RHSM_PASSWORD }}
+#    pool='^Employee SKU$'

@@ -1,11 +1,5 @@
----
-- name: Subscription UnRegister !
-  hosts: all
- 
-  tasks:
- 
-  - name: UnRegister Subscription 
-    redhat_subscription: 
-      state=absent 
-      username={{ RHSM_USERNAME }}
-      password={{ RHSM_PASSWORD }}
+- name: UnRegister Subscription 
+  redhat_subscription: 
+    state=absent 
+    username={{ RHSM_USERNAME }}
+    password={{ RHSM_PASSWORD }}

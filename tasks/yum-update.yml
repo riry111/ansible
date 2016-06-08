@@ -1,16 +1,10 @@
----
-- name: Yum Update 
-  hosts: all
- 
-  tasks:
-  
-  - name: Disable All  Repository
-    shell: subscription-manager repos --disable="*"
+- name: Disable All  Repository
+  shell: subscription-manager repos --disable="*"
 
-  - name: Enable Repository 
-    shell:  subscription-manager repos --enable={{ item }}
-    with_items: ${ENABLE_REPO_LIST}
+- name: Enable Repository 
+  shell:  subscription-manager repos --enable={{ item }}
+  with_items: ${ENABLE_REPO_LIST}
  
-  - name: Yum Update
-    shell: yum -y update
+- name: Yum Update
+  shell: yum -y update
 
